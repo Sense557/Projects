@@ -1,7 +1,7 @@
 
 
 import java.util.Calendar;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  *  Hospital Management System (Console-Based)
@@ -195,10 +195,10 @@ public class HMS
                             {
                                 case 1: 
                                     {
-                                        d[count1].new_doctors();
-                                        count1++;
+                                        d[count1].new_doctors();count1++;
+                                        break;
                                     }
-                                    break;
+                                    
                                 case 2:
                                     {
                                         System.out.println("--------------------------------------------------------------------------------");
@@ -211,8 +211,6 @@ public class HMS
                                         }
                                         break;
                                     }
-                                default: System.out.println("Invalid Choice! ");
-                                // break;
                             }
                             System.out.println("\nReturn to Back Press 1 and for Main Menu Press 0");
                             s1 = sc.nextInt();
@@ -250,9 +248,6 @@ public class HMS
                                         }
                                         break;
                                     }
-
-                                default: System.out.println("Invalid Choice!");
-                                // break;
                             }
                             System.out.println("\n Retrun back Press 1 or for Main Menu press 0");
                             s2 = sc.nextInt();
@@ -286,8 +281,6 @@ public class HMS
                                         }
                                         break;
                                     }
-                                    default: System.out.println("Invalid Choice!");
-                                    // break;
                                 }
                                 System.out.println("\n Retrun back Press 1 or for Main Menu press 0");
                                 s3 = sc.nextInt();
@@ -319,9 +312,6 @@ public class HMS
                                         }
                                         break;
                                     }
-
-                                default: System.out.println("Invalid Choice!");
-                                    break;
                             }
                             System.out.println("\n Retrun back Press 1 or for Main Menu press 0");
                             s4 = sc.nextInt();
@@ -353,9 +343,6 @@ public class HMS
                                         }
                                         break;
                                     }
-
-                                default: System.out.println("Invalid Choice!");
-                                    break;
                             }
                             System.out.println("\n Retrun back Press 1 or for Main Menu press 0");
                             s5 = sc.nextInt();
@@ -416,12 +403,11 @@ public class HMS
                                     }
                                     break;
                                 }
-                                default: System.out.println("Invalid Choice!");
-                                break;
                             }
                             System.out.println("\n Retrun back Press 1 or for Main Menu press 0");
                             s6 = sc.nextInt();
                         }
+                        sc.close();
                         break;
                     }
                 default: 
@@ -431,11 +417,9 @@ public class HMS
 
             }
             System.out.println("\nReturn to MAIN MENU Press 1");
-            status = sc.nextInt();
-            sc.close();
+            // status = sc.nextInt();
+            
         
         }
-
-        
     }
 }
