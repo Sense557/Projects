@@ -31,7 +31,7 @@ public class patient
 
     public void patient_info() 
     {
-        System.out.println(pid + "\t" + pname + "\t" + disease + "\t" + sex + "\t" + admit_status + "\t" + age );
+        System.out.println(pid + "\t" + pname + "\t" + disease + "    \t" + sex + "     \t" + admit_status + "\t" + age );
     }
 
 }

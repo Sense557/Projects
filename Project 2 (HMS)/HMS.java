@@ -71,7 +71,7 @@ public class HMS
         d[2].dname = "Dr.Rekha";
         d[2].dqualification = "Surgeon";
         d[2].dworkTime= "8-2AM";
-        d[2].dqualification = "BDM";
+        d[2].dqualification = "BDM,MS";
         d[2].droomNo = 8;
         d[3].did = "33";
         d[3].dname = "Dr.Pramod";
@@ -177,6 +177,7 @@ public class HMS
             System.out.println("-----------------------------------------------------------------------------------");
             System.out.println("1.Doctos  2. Patients  3.Medicines  4.Laboratories  5. Facilities  6. Staff ");
             System.out.println("-----------------------------------------------------------------------------------");
+            System.out.print("Please Enter your choice: ");
             choice = sc.nextInt();
             
             switch(choice)
@@ -202,12 +203,15 @@ public class HMS
                                 case 2:
                                     {
                                         System.out.println("--------------------------------------------------------------------------------");
-                                        System.out.println("id \t Name\t Specilist \t Timing \t Qualification \t Room No.");
+                                        System.out.println("ID \t NAME\t\t SPECIALIST \t TIMING \t QUALIFICATION \t ROOM NO.");
                                         System.out.println("--------------------------------------------------------------------------------");
                                         
                                         for(int j = 0; j<count1; j++)
                                         {
+                                            
                                             d[j].doctor_info();
+                                            
+                                            System.out.println("--------------------------------------------------------------------------------");
                                         }
                                         break;
                                     }
@@ -239,12 +243,13 @@ public class HMS
                                 case 2:
                                     {
                                         System.out.println("--------------------------------------------------------------------------------");
-                                        System.out.println("id \t Name \t Disease \t Gender \t Admit Status \t Age");
+                                        System.out.println("id \t NAME \t DISEASE \t GENDER \t ADMIT-STATUS \t AGE");
                                         System.out.println("--------------------------------------------------------------------------------");
                                         
                                         for(int j=0; j<count2; j++)
                                         {
                                             p[j].patient_info();
+                                            System.out.println("--------------------------------------------------------------------------------");
                                         }
                                         break;
                                     }
@@ -264,6 +269,7 @@ public class HMS
                         
                         while (s3 == 1) 
                             {
+                                
                                 System.out.println("1.Add New Entry\n2. Existing Medicines List");
                                 c1 = sc.nextInt();
 
@@ -275,9 +281,14 @@ public class HMS
                                     }
                                     case 2:
                                     {
+                                        System.out.println("--------------------------------------------------------------------------------");
+                                        System.out.println("NAME \t COMPANY \t EXPIRY-DATE \t COST");
+                                        System.out.println("--------------------------------------------------------------------------------");
+                                        
                                         for(int j = 0; j<coun3; j++)
                                         {
                                             m[j].find_medi();
+                                            System.out.println("--------------------------------------------------------------------------------");
                                         }
                                         break;
                                     }
@@ -306,9 +317,15 @@ public class HMS
 
                                 case 2:
                                     {
+                                        System.out.println("--------------------------------------------------------------------------------");
+                                        System.out.println("FACILITIES\t\t COST");
+                                        System.out.println("--------------------------------------------------------------------------------");
+                                        
                                         for(int j = 0; j < count4; j++)
                                         {
+                                            
                                             l[j].list_facilities();
+                                            System.out.println("--------------------------------------------------------------------------------");
                                         }
                                         break;
                                     }
@@ -337,9 +354,14 @@ public class HMS
 
                                 case 2:
                                     {
+                                        System.out.println("----------------------------");
+                                        System.out.println("FACILITIES");
+                                        System.out.println("----------------------------");
+
                                         for(int j = 0; j < count5; j++)
                                         {
                                             f[j].show_facility();
+                                            System.out.println("----------------------------");
                                         }
                                         break;
                                     }
@@ -370,36 +392,39 @@ public class HMS
                                 case 2:
                                 {
                                     System.out.println("--------------------------------------------------------------------------------");
-                                    System.out.println("id \t Name \t Gender \t Salary");
+                                    System.out.println("ID \t NAME \t GENDER \t SALARY");
                                     System.out.println("--------------------------------------------------------------------------------");
                                     for(int j = 0; j < count6; j++)
                                     {
                                         if(a.equals(s[j].sdesignation))
                                         s[j].staff_info();
+                                        
                                     }
                                     break;
                                 }
                                 case 3:
                                 {
                                     System.out.println("--------------------------------------------------------------------------------");
-                                    System.out.println("id \t Name \t Gender \t Salary");
+                                    System.out.println("ID \t NAME \t GENDER \t SALARY");
                                     System.out.println("--------------------------------------------------------------------------------");
                                     for(int k = 0; k < count6; k++)
                                     {
                                         if(b.equals(s[k].sdesignation))
                                         s[k].staff_info();
+                                        
                                     }
                                     break;
                                 }
                                 case 4:
                                 {
                                     System.out.println("--------------------------------------------------------------------------------");
-                                    System.out.println("id \t Name \t Gender \t Salary");
+                                    System.out.println("ID \t NAME \t GENDER \t SALARY");
                                     System.out.println("--------------------------------------------------------------------------------");
                                     for(int ll = 0; ll < count6; ll++)
                                     {
                                         if(c.equals(s[ll].sdesignation))
                                         s[ll].staff_info();
+                                        
                                     }
                                     break;
                                 }
@@ -407,7 +432,7 @@ public class HMS
                             System.out.println("\n Retrun back Press 1 or for Main Menu press 0");
                             s6 = sc.nextInt();
                         }
-                        sc.close();
+                       
                         break;
                     }
                 default: 
@@ -417,9 +442,7 @@ public class HMS
 
             }
             System.out.println("\nReturn to MAIN MENU Press 1");
-            // status = sc.nextInt();
-            
-        
+
         }
     }
 }

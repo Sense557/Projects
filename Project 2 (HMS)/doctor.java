@@ -19,10 +19,10 @@ public class doctor
     void new_doctors()
     {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Name:- ");
-        dname = sc.nextLine();
         System.out.println("Id:- ");
         did = sc.nextLine();
+        System.out.println("Name:- ");
+        dname = sc.nextLine();
         System.out.println("Specialization:- ");
         dspecialization = sc.nextLine();
         System.out.println("Worktime:- ");
@@ -37,7 +37,7 @@ public class doctor
 
     void doctor_info ()
     {
-        System.out.println(dname + "\t" +  did + "\t" + dspecialization + "\t" +  dworkTime + "\t" + dqualification  + "\t" + droomNo );
+        System.out.println(did + "\t | " + dname + "\t | " + dspecialization + "\t\t | " +  dworkTime + "\t | " + dqualification  + "\t | " + droomNo );
     }
     
 
