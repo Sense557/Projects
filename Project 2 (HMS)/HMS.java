@@ -168,14 +168,14 @@ public class HMS
 
 
         Scanner sc = new Scanner(System.in);
-        int choice, c1, status = 1, s1 = 1, s2 = 1, s3 = 1, s4 = 1, s5 = 1, s6 = 1;
+        int choice, c1, status = 1, s1 = 1, s2 = 1, s3 = 1, s4 = 1, s5 = 1, s6 = 1, s7 = 1;
         
         
         while (status==1) 
         {
             System.out.println("\n                                 MAIN MENU");
             System.out.println("-----------------------------------------------------------------------------------");
-            System.out.println("1.Doctos  2. Patients  3.Medicines  4.Laboratories  5. Facilities  6. Staff ");
+            System.out.println("1.Doctos  2. Patients  3.Medicines  4.Laboratories  5. Facilities  6. Staff  7.Exit");
             System.out.println("-----------------------------------------------------------------------------------");
             System.out.print("Please Enter your choice: ");
             choice = sc.nextInt();
@@ -197,6 +197,7 @@ public class HMS
                                 case 1: 
                                     {
                                         d[count1].new_doctors();count1++;
+                                        System.out.println("Successfully added!");
                                         break;
                                     }
                                     
@@ -237,6 +238,7 @@ public class HMS
                                 case 1:
                                     {
                                         p[count2].new_patient(); count2++;
+                                        System.out.println("Successfully added!");
                                         break;
                                     }
 
@@ -277,6 +279,7 @@ public class HMS
                                     case 1:
                                     {
                                         m[coun3].new_medi();coun3++;
+                                        System.out.println("Successfully added!");
                                         break;
                                     }
                                     case 2:
@@ -312,6 +315,7 @@ public class HMS
                                 case 1:
                                     {
                                         l[count4].new_facility();count4++;
+                                        System.out.println("Successfully added!");
                                         break;
                                     }
 
@@ -349,6 +353,7 @@ public class HMS
                                 case 1:
                                     {
                                         f[count5].add_facility();count5++;
+                                        System.out.println("Successfully added!");
                                         break;
                                     }
 
@@ -387,6 +392,7 @@ public class HMS
                                 case 1:
                                 {
                                     s[count6].new_staff();count6++;
+                                    System.out.println("Successfully added!");
                                     break;
                                 }
                                 case 2:
@@ -434,6 +440,11 @@ public class HMS
                         }
                        
                         break;
+                    }
+                case 7:
+                    {
+                        System.out.println("Successfully Exited!");
+                        System.exit(0);   
                     }
                 default: 
                     {
