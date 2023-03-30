@@ -1,4 +1,4 @@
-package HMS;
+
 
 import java.util.Scanner;
 
