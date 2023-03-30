@@ -190,7 +190,7 @@ public class HMS
                         s1 = 1;
                         while(s1 == 1)
                         {
-                            System.out.println("1.Add New Entry\n2.Existing Doctors List");
+                            System.out.println("1.Add New Entry\n2.Existing Doctors List\n3.Remove Patient");
                             c1 = sc.nextInt();
                             switch (c1) 
                             {
@@ -216,6 +216,7 @@ public class HMS
                                         }
                                         break;
                                     }
+                             
                             }
                             System.out.println("\nReturn to Back Press 1 and for Main Menu Press 0");
                             s1 = sc.nextInt();
@@ -232,7 +233,7 @@ public class HMS
                         s2 = 1;
                         while (s2 == 1) 
                         {
-                            System.out.println("1.Add New Entry\n2.Existing Patients List");
+                            System.out.println("1.Add New Entry\n2.Existing Patients List\n3.Remove Patient");
                             c1 = sc.nextInt();
                             switch (c1) {
                                 case 1:
@@ -255,6 +256,10 @@ public class HMS
                                         }
                                         break;
                                     }
+                                // case 3:
+                                //     {
+                                        
+                                //     }
                             }
                             System.out.println("\n Retrun back Press 1 or for Main Menu press 0");
                             s2 = sc.nextInt();

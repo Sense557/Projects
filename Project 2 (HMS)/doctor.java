@@ -33,6 +33,9 @@ public class doctor
         droomNo = sc.nextInt();
         // sc.close();
     }
+    
+
+    
 
 
     void doctor_info ()
