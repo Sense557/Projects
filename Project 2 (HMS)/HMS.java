@@ -233,7 +233,7 @@ public class HMS
                         s2 = 1;
                         while (s2 == 1) 
                         {
-                            System.out.println("1.Add New Entry\n2.Existing Patients List\n3.Remove Patient");
+                            System.out.println("1.Add New Entry\n2.Existing Patients List\n3.book appointment\n4.view appointments\n5.cancel appointment\n6.Remove Patient");
                             c1 = sc.nextInt();
                             switch (c1) {
                                 case 1:
@@ -256,10 +256,38 @@ public class HMS
                                         }
                                         break;
                                     }
-                                // case 3:
-                                //     {
-                                        
-                                //     }
+                                case 3:
+                                    {
+                                        for(int j=0; j<count2; j++)
+                                        {
+                                            p[j].bookAppointment();
+                                            System.out.println("--------------------------------------------------------------------------------");
+                                            System.exit(0);
+                                        }
+                                        break;
+                                    }
+                                case 4:
+                                    {
+                                        for(int j=0; j<count2; j++)
+                                        {
+                                            p[j].viewAppointments();
+                                            System.out.println("--------------------------------------------------------------------------------");
+                                            System.exit(0);
+                                        }
+                                        break;
+                                    }
+                                case 5:
+                                {
+                                    for(int j=0; j<count2; j++)
+                                    {
+                                        p[j].cancelAppointment();
+                                        System.out.println("--------------------------------------------------------------------------------");
+                                        System.exit(0);
+                                    }
+                                    
+                                }
+                                break;
+                                
                             }
                             System.out.println("\n Retrun back Press 1 or for Main Menu press 0");
                             s2 = sc.nextInt();
